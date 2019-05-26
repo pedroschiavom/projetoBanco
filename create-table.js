@@ -1,4 +1,4 @@
-const connStr = "Server=XXX;Database=XXX;User Id=XXX;Password=XXX";
+const connStr = "Server=DESKTOP-4BGCQVH;Database=TESTE;User Id=sa;Password=pedrones;";
 const sql = require("mssql");
 
 sql.connect(connStr)
@@ -7,7 +7,7 @@ sql.connect(connStr)
 
     function createTable(conn){
 
-        const table = new sql.Table('Clientes');
+        const table = new sql.Table('Clientes1');
         table.create = true;
         table.columns.add('ID',sql.Int, {nullable: false, primary:true});
         table.columns.add('Nome',sql.NVarChar(150),{nullable:false});
